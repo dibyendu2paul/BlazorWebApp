@@ -82,6 +82,41 @@ using BlazorWebApp.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\_Imports.razor"
+using Syncfusion.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\_Imports.razor"
+using Syncfusion.Blazor.Grids;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\_Imports.razor"
+using Syncfusion.Blazor.Spinner;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\_Imports.razor"
+using BlazorWebApp.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\_Imports.razor"
+using BlazorWebApp.Client.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Syncfusion.Blazor.Grid": {
               "target": "Package",
               "version": "[19.2.0.56, )"

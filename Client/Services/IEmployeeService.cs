@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorWebApp.Server.Services
+namespace BlazorWebApp.Client.Services
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeService
     {
         Task<IEnumerable<Employee>> GetEmployees();
         Task<Employee> GetEmployee(int employeeId);

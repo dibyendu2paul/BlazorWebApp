@@ -18,6 +18,10 @@ namespace BlazorWebApp.Server.Services
         }
         public async Task<Employee> AddEmployee(Employee employee)
         {
+            if(employee.Department != null)
+            {
+                appDbContext.Entry(employee.Department).State = EntityState.Unchanged;
+            }
             var result = await appDbContext.Employees.AddAsync(employee);
             await appDbContext.SaveChangesAsync();
             return result.Entity;
@@ -40,9 +44,24 @@ namespace BlazorWebApp.Server.Services
                 .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
         }
 
+        public async Task<Employee> GetEmployeeByEmail(string mail)
+        {
+            return await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.Email == mail);
+        }
+
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
             return await appDbContext.Employees.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Employee>> SearchEmployee(string name, Gender? gender)
+        {
+            IQueryable<Employee> query = appDbContext.Employees;
+            if (!string.IsNullOrEmpty(name)) query = query.Where(e => e.FirstName.Contains(name) || e.LastName.Contains(name));
+            if(gender !=null)
+            query = query.Where(e => e.Gender == gender);
+            return await query.ToListAsync();
         }
 
         public async Task<Employee> UpdateEmployee(Employee employee)

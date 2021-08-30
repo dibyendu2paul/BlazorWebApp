@@ -34,7 +34,24 @@ namespace BlazorWebApp.Server.Controllers
             }
 
         }
-        [HttpGet("{id}")]
+
+        [HttpGet("{Search}")]
+        public async Task<ActionResult<IEnumerable<Employee>>> Search(string name, Gender gender)
+        {
+            try
+            {
+                var result = await employeeRepository.SearchEmployee(name, gender);
+                if (result.Any()) return Ok(result);
+                return NotFound();
+
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error while retrieving data by search criteria");
+            }
+        }
+        [HttpGet("{Id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int Id)
         {
             try
@@ -50,13 +67,22 @@ namespace BlazorWebApp.Server.Controllers
             }
 
         }
-
+        [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
             try
             {
+                if (employee == null) BadRequest();
+                if(employee!= null)
+                {
+                    var duplicateEmail = await employeeRepository.GetEmployeeByEmail(employee.Email);
+                    if (duplicateEmail != null)
+                    {
+                        ModelState.AddModelError("Email", "Email already exists and it is already in use");
+                        return BadRequest(ModelState);
+                    }
+                }
                 var createdEmployee = await employeeRepository.AddEmployee(employee);
-                if (createdEmployee == null) BadRequest();
                 return CreatedAtAction(nameof(GetEmployee), new { Id = createdEmployee.EmployeeId}, createdEmployee);
             }
             catch (Exception)

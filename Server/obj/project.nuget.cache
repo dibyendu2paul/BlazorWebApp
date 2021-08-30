@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I9GbO8CHES5CaZ/9Fig6V8Ur8f70hymvWgzu4IG94+KL5iSJjmMI5cZJOzYUuqHG1rHm7aUM2+dD74gEMnXFmw==",
+  "dgSpecHash": "ieVgwt1bgLUngiP1gM7u3Yub1dFds2phRYitznXZ02CYO6ePPc+jTViFeE+yHH7GG/FdyabBvDK6HHtFWDSyMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\dibye\\OneDrive\\Documents\\Study\\ASP.NetCore\\BlazorWebApp\\Server\\BlazorWebApp.Server.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\dibye\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
