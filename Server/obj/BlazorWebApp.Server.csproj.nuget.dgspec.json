@@ -65,7 +65,7 @@
             },
             "Syncfusion.Blazor.Grid": {
               "target": "Package",
-              "version": "[19.2.0.56, )"
+              "version": "[19.2.0.59, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",

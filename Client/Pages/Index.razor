@@ -1,8 +1,8 @@
 ﻿@page "/"
 @using Syncfusion.Blazor.Grids
 
-
 <SfSpinner @bind-Visible="SpinnerVisible" Label="Loading Data..." Size="50" Type="SpinnerType.Bootstrap4"></SfSpinner>
+
 @if (Employees != null)
 {
     <SfGrid DataSource="@Employees">
@@ -13,6 +13,7 @@
             <GridColumn Field=@nameof(Employee.Email) HeaderText="Email"></GridColumn>
         </GridColumns>
     </SfGrid>
+
 }
 
 @code{
@@ -23,7 +24,7 @@
     public IEmployeeService EmployeeService { get; set; }
     public bool SpinnerVisible { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
     {
         SpinnerVisible = true;
         await Task.Delay(3000);

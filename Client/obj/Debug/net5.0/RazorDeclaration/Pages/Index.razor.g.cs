@@ -126,7 +126,7 @@ using Syncfusion.Blazor.Grids;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\Pages\Index.razor"
+#line 19 "C:\Users\dibye\OneDrive\Documents\Study\ASP.NetCore\BlazorWebApp\Client\Pages\Index.razor"
       
 
     public List<Employee> Employees { get; set; }
@@ -135,7 +135,7 @@ using Syncfusion.Blazor.Grids;
     public IEmployeeService EmployeeService { get; set; }
     public bool SpinnerVisible { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
     {
         SpinnerVisible = true;
         await Task.Delay(3000);
