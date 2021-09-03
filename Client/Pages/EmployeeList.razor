@@ -1,7 +1,7 @@
-﻿@page "/EmployeeList"
+﻿@page "/employeelist"
 @inherits EmployeeListBase
 
-<h3>EmployeeList</h3>
+<h3>Employee List</h3>
 
 @if (Employees != null)
 {
@@ -14,7 +14,7 @@
                 </div>
                 <img class="card-img-top imageThumbnail" src="@employee.PhotoPath" />
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-primary m-1">View</a>
+                    <a href="@($"employeedetails/{employee.EmployeeId}")"  class="btn btn-primary m-1">View</a>
 
                     <a href="#" class="btn btn-primary m-1">Edit</a>
 

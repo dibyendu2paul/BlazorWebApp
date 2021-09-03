@@ -26,9 +26,9 @@ namespace BlazorWebApp.Client.Services
             throw new NotImplementedException();
         }
 
-        public Task<Employee> GetEmployee(int employeeId)
+        public async Task<Employee> GetEmployee(int employeeId)
         {
-            throw new NotImplementedException();
+            return await httpClient.GetFromJsonAsync<Employee>($"/api/employees/{employeeId}");
         }
 
         public Task<Employee> GetEmployeeByEmail(string mail)
