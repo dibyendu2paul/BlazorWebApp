@@ -60,7 +60,7 @@ namespace BlazorWebApp.Server.Controllers
                 if (result == null) return NotFound();
                 return result;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error retrivieving data by ID from database");
